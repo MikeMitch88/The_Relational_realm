@@ -94,11 +94,68 @@ INSERT INTO customer_address (customer_id, address_id, address_status_id) VALUES
 (7, 6, 1),  -- Wang Wei - Shanghai
 (1, 10, 2); -- John - Old address in Toronto
 
+INSERT INTO order_status (status_name) VALUES 
+('Pending'),
+('Processing'),
+('Shipped'),
+('Delivered'),
+('Cancelled'),
+('Returned');
+
+INSERT INTO cust_order (customer_id, order_status_id, shipping_method_id, total_amount)
+VALUES
+(1, 1, 1, 29.99),  -- Customer 1, Pending order status, Standard shipping, Total $29.99
+(2, 2, 2, 49.99),  -- Customer 2, Processing order status, Express shipping, Total $49.99
+(3, 3, 3, 19.99),  -- Customer 3, Shipped order status, Same Day shipping, Total $19.99
+(4, 4, 1, 39.99),  -- Customer 4, Delivered order status, Standard shipping, Total $39.99
+(5, 5, 2, 59.99);  -- Customer 5, Cancelled order status, Express shipping, Total $59.99
 
 
+INSERT INTO shipping_method (method_name, cost)
+VALUES
+('Standard Shipping', 5.99),    -- Standard shipping method with a cost of 5.99
+('Express Shipping', 9.99),     -- Express shipping method with a cost of 9.99
+('Same Day Shipping', 19.99);   -- Same-day shipping method with a cost of 19.99
 
+INSERT INTO order_status (status_name) VALUES 
+('Pending'),
+('Processing'),
+('Shipped'),
+('Delivered'),
+('Cancelled'),
+('Returned');
 
+INSERT INTO order_history (order_id, order_status_id, change_timestamp, remarks)
+VALUES
+(1, 1, '2025-04-13 10:00:00', 'Order created, awaiting payment'), 
+(2, 2, '2025-04-13 11:00:00', 'Order payment confirmed, now processing'),  
+(3, 3, '2025-04-13 12:00:00', 'Order shipped, on the way to the customer'),  
+(4, 4, '2025-04-13 13:00:00', 'Order delivered to customer, completed'),  
+(5, 5, '2025-04-13 14:00:00', 'Order cancelled due to customer request'); 
 
+INSERT INTO customer (email)
+VALUES
+  ('barbie@example.com'),
+  ('thor@example.com'),
+  ('hulk@example.com'),
+  ('ironman@example.com'),
+  ('spiderman@example.com');
 
+INSERT INTO cust_order (customer_id)
+VALUES
+  (1),  -- Order for Barbie (customer 1)
+  (2),  -- Order for Thor (customer 2)
+  (3),  -- Order for Hulk (customer 3)
+  (4),  -- Order for Ironman (customer 4)
+  (5);  -- Order for Spiderman (customer 5)
+
+INSERT INTO order_line (order_id, book_id, quantity, price)
+VALUES
+  (1, 1, 2, 15.99),  -- Barbie's order (order_id = 1), Book 1, 2 copies, $15.99 each
+  (1, 2, 1, 25.99),  -- Barbie's order (order_id = 1), Book 2, 1 copy, $25.99 each
+  (2, 3, 3, 18.99),  -- Thor's order (order_id = 2), Book 3, 3 copies, $18.99 each
+  (3, 4, 2, 30.99),  -- Hulk's order (order_id = 3), Book 4, 2 copies, $30.99 each
+  (4, 5, 4, 12.99),  -- Ironman's order (order_id = 4), Book 5, 4 copies, $12.99 each
+  (5, 1, 1, 15.99);  -- Spiderman's order (order_id = 5), Book 1, 1 copy, $15.99
 
 

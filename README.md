@@ -31,4 +31,4 @@ user management, and query optimization.
 ## 🚀 Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/BookStore-Database.git
+   git clone https://github.com/yourusername/The_Relational_realm.git

@@ -8,7 +8,7 @@ user management, and query optimization.
 
 ## 📘 Entity-Relationship Diagram
 
-![ERD](.assets/DB_ERD.drawio.png)
+![ERD](./assets/DB_ERD.drawio.png)
 
 
 

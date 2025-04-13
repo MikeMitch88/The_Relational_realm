@@ -133,22 +133,6 @@ VALUES
 (4, 4, '2025-04-13 13:00:00', 'Order delivered to customer, completed'),  
 (5, 5, '2025-04-13 14:00:00', 'Order cancelled due to customer request'); 
 
-INSERT INTO customer (email)
-VALUES
-  ('barbie@example.com'),
-  ('thor@example.com'),
-  ('hulk@example.com'),
-  ('ironman@example.com'),
-  ('spiderman@example.com');
-
-INSERT INTO cust_order (customer_id)
-VALUES
-  (1),  -- Order for Barbie (customer 1)
-  (2),  -- Order for Thor (customer 2)
-  (3),  -- Order for Hulk (customer 3)
-  (4),  -- Order for Ironman (customer 4)
-  (5);  -- Order for Spiderman (customer 5)
-
 INSERT INTO order_line (order_id, book_id, quantity, price)
 VALUES
   (1, 1, 2, 15.99),  -- Barbie's order (order_id = 1), Book 1, 2 copies, $15.99 each

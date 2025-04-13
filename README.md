@@ -6,7 +6,10 @@ including books, authors, customers, orders, and shipping.
 This project demonstrates database design, normalization, 
 user management, and query optimization.
 
-[ER Diagram]
+## 📘 Entity-Relationship Diagram
+
+![ERD](./DB_ERD.drawio.png)
+
 
 
 ## 📌 Objectives
